@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 /**
  * @author zgtian
@@ -17,16 +16,39 @@ public class SortTest {
     private static final int[] OUTPUT = new int[] {1, 2, 3, 5, 11, 56};
 
     @Test
-    public void testSimpleSort() {
+    public void testSelectionSort() {
         doSortTest(new SelectionSort());
+    }
+
+    @Test
+    public void testInsertionSort() {
         doSortTest(new InsertionSort());
+    }
+
+    @Test
+    public void testBubbleSort() {
         doSortTest(new BubbleSort());
     }
 
-//    @Test
-//    public void testSeniorSort() {
-//
-//    }
+    @Test
+    public void testMergeSort() {
+        doSortTest(new MergeSort());
+    }
+
+    @Test
+    public void testMergeSortBU() {
+        doSortTest(new MergeSortBU());
+    }
+
+    @Test
+    public void testFastSort() {
+        doSortTest(new FastSort());
+    }
+
+    @Test
+    public void testFastSortThreePath() {
+        doSortTest(new FastSortThreePath());
+    }
 
     private void doSortTest(Sort sort) {
         int[] res = sort.sort(Arrays.copyOf(INPUT, INPUT.length));
