@@ -50,6 +50,11 @@ public class SortTest {
         doSortTest(new FastSortThreePath());
     }
 
+    @Test
+    public void testHeapSort() {
+        doSortTest(new HeapSort());
+    }
+
     private void doSortTest(Sort sort) {
         int[] res = sort.sort(Arrays.copyOf(INPUT, INPUT.length));
         assertArrayEquals(OUTPUT, res);
