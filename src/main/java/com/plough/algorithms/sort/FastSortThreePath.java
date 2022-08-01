@@ -27,13 +27,14 @@ public class FastSortThreePath implements Sort {
         // arr[r, high] 都是 > v
         int l = low;
         int r = high + 1;
-        for (int i = low + 1; i < r; i++) {
+        for (int i = low + 1; i < r;) {
             if (arr[i] < v) {
-                SortHelper.swap(arr, i, ++l);
+                SortHelper.swap(arr, i++, ++l);
             } else if (arr[i] > v) {
                 SortHelper.swap(arr, i, --r);
             } else {
                 // do nothing
+                i++;
             }
         }
         SortHelper.swap(arr, l, low);

@@ -12,8 +12,8 @@ import static org.junit.Assert.assertArrayEquals;
  * @date 2020/10/26
  **/
 public class SortTest {
-    private static final int[] INPUT = new int[] {5, 2, 1, 56, 3, 11};
-    private static final int[] OUTPUT = new int[] {1, 2, 3, 5, 11, 56};
+    private static final int[] INPUT = new int[] {5, 2, 1, 56, 3, 5, 11};
+    private static final int[] OUTPUT = new int[] {1, 2, 3, 5, 5, 11, 56};
 
     @Test
     public void testSelectionSort() {
