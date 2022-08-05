@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
 import org.junit.Test;
 
 /**
@@ -26,6 +27,7 @@ public class L153_Rotate {
     Deque<Integer> dq = new LinkedList<>();
     dq.peekFirst();
     Map<Integer, Integer> m = new HashMap<>();
+    l = new CopyOnWriteArrayList<>();
   }
 
   public int findMin(int[] nums) {
